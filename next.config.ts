@@ -6,8 +6,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true
   },
-  // Configure asset prefix for GitHub Pages
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/Protfolio2.0' : '',
+  // Remove asset prefix to fix CSS loading issues
+  // assetPrefix: process.env.NODE_ENV === 'production' ? '/Protfolio2.0' : '',
 };
 
 export default nextConfig;
