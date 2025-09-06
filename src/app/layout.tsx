@@ -47,6 +47,28 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            :root {
+              --background: #ffffff;
+              --foreground: #171717;
+              --primary: #3b82f6;
+              --primary-foreground: #ffffff;
+              --secondary: #8b5cf6;
+              --border: #e5e7eb;
+            }
+            @media (prefers-color-scheme: dark) {
+              :root {
+                --background: #0a0a0a;
+                --foreground: #ededed;
+                --primary: #60a5fa;
+                --primary-foreground: #1e293b;
+                --secondary: #a78bfa;
+                --border: #374151;
+              }
+            }
+          `
+        }} />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
