@@ -4,7 +4,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
-function ProjectCard({ project, index }: { project: any; index: number }) {
+interface Project {
+  title: string;
+  description: string;
+  technologies: string[];
+  image: string;
+  github: string;
+  live: string;
+}
+
+function ProjectCard({ project, index }: { project: Project; index: number }) {
   const { ref, isVisible } = useScrollAnimation<HTMLDivElement>({
     threshold: 0.1,
     rootMargin: "0px 0px -100px 0px",
@@ -67,13 +76,14 @@ export default function Projects() {
   const { ref: titleRef, isVisible: titleVisible } =
     useScrollAnimation<HTMLHeadingElement>();
 
-  const projects = [
+  const projects: Project[] = [
     {
       title: "Task Management App",
       description:
         "A collaborative task management application with real-time updates, team collaboration features, and project tracking.",
       technologies: ["React", "Node.js", "Bootstrap"],
       image: "/images/connors-webpage.png",
+      github: "https://github.com",
       live: "https://example.com",
     },
     {
@@ -82,6 +92,7 @@ export default function Projects() {
         "Whether you're cheering for the Yankees, Cubs, or any other team, you'll find all the information you need right here.",
       technologies: ["React", "TypeScript", "Chart.js", "Bootstrap"],
       image: "/images/MLB_Standings.jpg",
+      github: "https://github.com",
       live: "https://connordevitt.github.io/Reactoria/",
     },
   ];

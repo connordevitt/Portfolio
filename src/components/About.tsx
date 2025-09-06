@@ -60,14 +60,14 @@ export default function About() {
               }`}
             >
               <p className="text-lg text-foreground/80 mb-6 leading-relaxed">
-                I'm a passionate full-stack developer with a love for creating
-                innovative digital solutions. With experience in modern web
-                technologies, I enjoy building applications that make a
+                I&apos;m a passionate full-stack developer with a love for
+                creating innovative digital solutions. With experience in modern
+                web technologies, I enjoy building applications that make a
                 difference.
               </p>
               <p className="text-lg text-foreground/80 mb-6 leading-relaxed">
-                When I'm not coding, you can find me exploring new technologies,
-                playing video games, or watching sports!
+                When I&apos;m not coding, you can find me exploring new
+                technologies, playing video games, or watching sports!
               </p>
               <div className="flex flex-wrap gap-2">
                 {skills.map((skill) => (

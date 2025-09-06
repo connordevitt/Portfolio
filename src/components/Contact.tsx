@@ -207,12 +207,12 @@ export default function Contact() {
               }`}
             >
               <h3 className="text-2xl font-bold text-foreground mb-6">
-                Let's work together
+                Let&apos;s work together
               </h3>
               <p className="text-lg text-foreground/80 mb-8 leading-relaxed">
-                I'm always interested in new opportunities and exciting
+                I&apos;m always interested in new opportunities and exciting
                 projects. Whether you have a question or just want to say hi,
-                I'll try my best to get back to you!
+                I&apos;ll try my best to get back to you!
               </p>
 
               <div className="space-y-4">

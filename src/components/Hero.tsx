@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="container mx-auto px-6 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight">
-            Hi, I'm{" "}
+            Hi, I&apos;m{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
               Connor Devitt
             </span>
