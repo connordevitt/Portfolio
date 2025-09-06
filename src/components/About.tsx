@@ -29,6 +29,8 @@ export default function About() {
     "MySQL",
     "Git",
     "Tailwind CSS",
+    "Bootstrap",
+    "SQL",
   ];
 
   return (
