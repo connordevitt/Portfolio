@@ -25,6 +25,11 @@ export const metadata: Metadata = {
     "nextjs",
   ],
   authors: [{ name: "Connor Devitt" }],
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
   openGraph: {
     title: "Connor Devitt - Portfolio",
     description: "Full-stack developer and software engineer portfolio",
@@ -39,6 +44,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
