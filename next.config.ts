@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
     unoptimized: true
   },
   // Set asset prefix for GitHub Pages deployment
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/Portfolio2.0' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/Portfolio' : '',
 };
 
 export default nextConfig;
