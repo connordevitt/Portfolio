@@ -50,16 +50,10 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
 
         <div className="flex gap-4">
           <Link
-            href={project.github}
-            className="flex-1 text-center py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors"
-          >
-            GitHub
-          </Link>
-          <Link
             href={project.live}
             className="flex-1 text-center py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
           >
-            Live Demo
+            View Project
           </Link>
         </div>
       </div>
@@ -80,23 +74,15 @@ export default function Projects() {
         "A collaborative task management application with real-time updates, team collaboration features, and project tracking.",
       technologies: ["React", "Node.js", "Bootstrap"],
       image: "/images/connors-webpage.png",
-      github: "https://github.com",
       live: "https://example.com",
     },
     {
       title: "MLB Standings Tracker",
       description:
         "Whether you're cheering for the Yankees, Cubs, or any other team, you'll find all the information you need right here.",
-      technologies: [
-        "React",
-        "TypeScript",
-        "Chart.js",
-        "OpenWeather API",
-        "CSS Modules",
-      ],
+      technologies: ["React", "TypeScript", "Chart.js", "Bootstrap"],
       image: "/images/MLB_Standings.jpg",
-      github: "https://github.com",
-      live: "https://example.com",
+      live: "https://connordevitt.github.io/Reactoria/",
     },
   ];
 

@@ -16,7 +16,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-xl md:text-2xl text-foreground/80 mb-8 leading-relaxed">
-            Full-stack developer passionate about creating innovative digital
+            Full-stack developer focused on building modern, impactful digital
             experiences
           </p>
 
