@@ -90,7 +90,7 @@ export default function About() {
               <div className="w-full h-96 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center overflow-hidden">
                 <div className="w-80 h-80 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center overflow-hidden shadow-2xl">
                   <Image
-                    src="/images/ME.jpg"
+                    src="./images/ME.jpg"
                     alt="Connor Devitt"
                     width={320}
                     height={320}

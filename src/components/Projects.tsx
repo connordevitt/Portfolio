@@ -9,7 +9,6 @@ interface Project {
   description: string;
   technologies: string[];
   image: string;
-  github: string;
   live: string;
 }
 
@@ -82,17 +81,15 @@ export default function Projects() {
       description:
         "A collaborative task management application with real-time updates, team collaboration features, and project tracking.",
       technologies: ["React", "Node.js", "Bootstrap"],
-      image: "/images/connors-webpage.png",
-      github: "https://github.com",
-      live: "https://example.com",
+      image: "./images/connors-webpage.png",
+      live: "https://connors-webpage.com/landing",
     },
     {
       title: "MLB Standings Tracker",
       description:
         "Whether you're cheering for the Yankees, Cubs, or any other team, you'll find all the information you need right here.",
       technologies: ["React", "TypeScript", "Chart.js", "Bootstrap"],
-      image: "/images/MLB_Standings.jpg",
-      github: "https://github.com",
+      image: "./images/MLB_Standings.jpg",
       live: "https://connordevitt.github.io/Reactoria/",
     },
   ];

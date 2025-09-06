@@ -34,7 +34,7 @@ export default function Hero() {
               Get In Touch
             </Link>
             <a
-              href="/Connor-DevittResume.pdf"
+              href="./Connor-DevittResume.pdf"
               download="Connor_Devitt_Resume.pdf"
               className="px-8 py-4 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300"
             >
