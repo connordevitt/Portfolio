@@ -6,8 +6,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true
   },
-  // Remove this if you're deploying to a custom domain
-  // assetPrefix: process.env.NODE_ENV === 'production' ? '/your-repo-name' : '',
+  // Configure asset prefix for GitHub Pages
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/Protfolio2.0' : '',
 };
 
 export default nextConfig;
