@@ -57,12 +57,14 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         </div>
 
         <div className="flex gap-4">
-          <Link
+          <a
             href={project.live}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex-1 text-center py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
           >
             View Project
-          </Link>
+          </a>
         </div>
       </div>
     </div>

@@ -26,7 +26,6 @@ export default function About() {
     "Python",
     "AWS",
     "Digital Ocean",
-    "MySQL",
     "Git",
     "Tailwind CSS",
     "Bootstrap",
