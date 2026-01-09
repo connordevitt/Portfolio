@@ -6,8 +6,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true
   },
-  // Set asset prefix for GitHub Pages deployment
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/Portfolio' : '',
+  // Set base path for GitHub Pages deployment
+  basePath: process.env.NODE_ENV === 'production' ? '/Portfolio' : '',
 };
 
 export default nextConfig;
