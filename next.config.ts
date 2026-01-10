@@ -1,15 +1,20 @@
 import type { NextConfig } from "next";
 
 
-const BASE_PATH = process.env.NODE_ENV === 'production' ? '/Portfolio' : '';
+const isVercel = !!process.env.VERCEL;
+const isGitHubPages = !isVercel && process.env.NODE_ENV === 'production';
+
+const BASE_PATH = isGitHubPages ? '/Portfolio' : '';
 
 const nextConfig: NextConfig = {
-  output: 'export',
+  
+  ...(isGitHubPages && { output: 'export' }),
   trailingSlash: true,
   images: {
     unoptimized: true
   },
-  basePath: BASE_PATH,
+  
+  ...(BASE_PATH && { basePath: BASE_PATH }),
 };
 
 export default nextConfig;
