@@ -437,7 +437,7 @@ export default function BlogPost() {
         </nav>
 
         <header className={`blog-hero ${isVisible ? "visible" : ""}`}>
-          <p className="blog-hero-label">Essay · Technology</p>
+          <p className="blog-hero-label">Technology</p>
           <h1 className="blog-hero-title">{post.title}</h1>
           <p className="blog-hero-subtitle">{post.subtitle}</p>
           <div className="blog-hero-rule" />
