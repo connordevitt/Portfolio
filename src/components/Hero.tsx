@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 
 export default function Hero() {
@@ -34,8 +36,15 @@ export default function Hero() {
               Get In Touch
             </Link>
             <a
-              href="./Connor-DevittResume.pdf"
-              download="Connor_Devitt_Resume.pdf"
+              href="./Connor_Devitt_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => {
+                const link = document.createElement("a");
+                link.href = "./Connor_Devitt_Resume.pdf";
+                link.download = "Connor_Devitt_Resume.pdf";
+                link.click();
+              }}
               className="px-8 py-4 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300"
             >
               Download Resume
