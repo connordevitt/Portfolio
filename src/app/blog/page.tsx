@@ -1,6 +1,23 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+
+export const metadata: Metadata = {
+  title: "Blog",
+  description:
+    "Essays and longer-form thoughts from Connor Devitt on software development, platforms, security, and the open web.",
+  alternates: {
+    canonical: "/blog/",
+  },
+  openGraph: {
+    title: "Blog | Connor Devitt",
+    description:
+      "Essays and longer-form thoughts from Connor Devitt on software development, platforms, security, and the open web.",
+    url: "/blog/",
+    type: "website",
+  },
+};
 
 export default function BlogPage() {
   return (
