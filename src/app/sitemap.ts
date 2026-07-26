@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "../config/site";
+import { POSTS, postUrl } from "../content/posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
@@ -17,11 +18,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.8,
     },
-    {
-      url: `${SITE_URL}/blog/walled-gardens/`,
-      lastModified,
-      changeFrequency: "yearly",
+    ...POSTS.map((post) => ({
+      url: `${SITE_URL}${postUrl(post)}`,
+      lastModified: new Date(post.publishedTime),
+      changeFrequency: "yearly" as const,
       priority: 0.6,
-    },
+    })),
   ];
 }

@@ -4,11 +4,11 @@ import {
   getPost,
 } from "../../../content/posts";
 
-const post = getPost("walled-gardens");
+const post = getPost("splunk-botsv1");
 
 export const metadata = buildPostMetadata(post);
 
-export default function WalledGardensLayout({
+export default function SplunkBotsv1Layout({
   children,
 }: {
   children: React.ReactNode;

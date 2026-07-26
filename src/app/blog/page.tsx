@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { POSTS, postUrl } from "../../content/posts";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -30,29 +31,33 @@ export default function BlogPage() {
               Blog
             </h1>
             <p className="text-lg text-foreground/80 leading-relaxed mb-10">
-              Essays and longer-form thoughts on software development, platforms,
+              Essays and longer-form thoughts on software development, security,
               and the open web.
             </p>
 
             <div className="space-y-6">
-              <article className="bg-background/60 border border-border rounded-xl p-6 hover:shadow-lg transition-shadow">
-                <p className="text-sm text-foreground/60 mb-2">
-                  March 2026 · 5 min read
-                </p>
-                <h2 className="text-2xl font-semibold text-foreground mb-2">
-                  Why Can&apos;t I Just Build One App?
-                </h2>
-                <p className="text-foreground/80 mb-4 leading-relaxed">
-                  The hidden cost of Apple and Google&apos;s walled gardens, and
-                  why developers still have to build the same app twice.
-                </p>
-                <Link
-                  href="/blog/walled-gardens"
-                  className="text-primary font-medium hover:underline"
+              {POSTS.map((post) => (
+                <article
+                  key={post.slug}
+                  className="bg-background/60 border border-border rounded-xl p-6 hover:shadow-lg transition-shadow"
                 >
-                  Read essay →
-                </Link>
-              </article>
+                  <p className="text-sm text-foreground/60 mb-2">
+                    {post.date} · {post.readTime}
+                  </p>
+                  <h2 className="text-2xl font-semibold text-foreground mb-2">
+                    {post.title}
+                  </h2>
+                  <p className="text-foreground/80 mb-4 leading-relaxed">
+                    {post.excerpt}
+                  </p>
+                  <Link
+                    href={postUrl(post)}
+                    className="text-primary font-medium hover:underline"
+                  >
+                    Read post →
+                  </Link>
+                </article>
+              ))}
             </div>
           </div>
         </section>
