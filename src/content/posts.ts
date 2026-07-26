@@ -46,8 +46,7 @@ export interface PostMeta {
 const posts: PostMeta[] = [
   {
     slug: "splunk-botsv1",
-    title: "Reconstructing a Web-Application Intrusion in Splunk",
-    subtitle: "A BOTSv1 Walkthrough",
+    title: "Splunk BOTSv1 Lab: Reconstructing a Web-Application Intrusion",
     category: "Security",
     date: "July 2026",
     publishedTime: "2026-07-25",

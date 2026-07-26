@@ -47,12 +47,6 @@ const blocks: Block[] = [
     code: 'index=* sourcetype=stream:http src_ip="40.80.148.42"',
   },
   {
-    type: "image",
-    src: `${IMG}/02-raw-events.png`,
-    alt: "Splunk event list showing raw HTTP requests originating from 40.80.148.42.",
-    caption: "Raw HTTP events from the top-talking host.",
-  },
-  {
     type: "paragraph",
     text: "I then wanted to check the user agent this IP was sending, since an automated scanner will usually give itself away there:",
   },
@@ -63,7 +57,7 @@ const blocks: Block[] = [
   },
   {
     type: "image",
-    src: `${IMG}/03-user-agents.png`,
+    src: `${IMG}/02-user-agents.png`,
     alt: "Splunk results showing injection payloads appearing in the http_user_agent field instead of real browser user agents.",
     caption:
       "The User-Agent header is carrying payloads, not browser identifiers.",
@@ -87,8 +81,8 @@ const blocks: Block[] = [
   },
   {
     type: "image",
-    src: `${IMG}/04-admin-posts.png`,
-    alt: "Splunk results table showing POST request counts to administrator paths grouped by source IP.",
+    src: `${IMG}/03-admin-posts.png`,
+    alt: "Splunk results table showing POST counts to administrator paths grouped by source IP and URI path, with 23.22.63.114 accounting for 412 hits on the Joomla admin login.",
     caption: "Where the administrator POSTs are concentrated, and from whom.",
   },
   {
@@ -106,7 +100,7 @@ const blocks: Block[] = [
   },
   {
     type: "note",
-    text: "If you want the credential to appear directly in the results table rather than by opening the raw events, `... uri_path=\"*administrator*\" | table _time, src_ip, form_data` pulls the POST body into the output.",
+    text: "(If you want the credential to appear directly in the results table rather than by opening the raw events, `... uri_path=\"*administrator*\" | table _time, src_ip, form_data` pulls the POST body into the output.)",
   },
   {
     type: "heading",
@@ -138,7 +132,14 @@ const blocks: Block[] = [
   {
     type: "code",
     label: "SPL",
-    code: 'index=* sourcetype=stream:http src_ip="40.80.148.42" uri_path="*administrator*"\n| sort _time\n| table _time, uri_path, http_method, status',
+    code: 'index=* sourcetype=stream:http src_ip="40.80.148.42" uri_path="*administrator*" | sort _time | table _time, uri_path, http_method, status',
+  },
+  {
+    type: "image",
+    src: `${IMG}/04-status-timeline.png`,
+    alt: "Splunk table of administrator requests in time order: a run of 404 responses to component paths, then a GET 200 on the login page, a POST 303, and further GET 200 responses into the admin index.",
+    caption:
+      "The request timeline: probing 404s, then the login sequence that sticks.",
   },
   {
     type: "paragraph",
