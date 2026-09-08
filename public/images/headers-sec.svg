@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="600" height="500" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="600" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#141a2e"/>
+      <stop offset="1" stop-color="#232c52"/>
+    </linearGradient>
+    <linearGradient id="g" x1="220" y1="120" x2="380" y2="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6f7bea"/>
+      <stop offset="1" stop-color="#4a55b8"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="500" fill="url(#bg)"/>
+  <g transform="translate(220 120) scale(5.5)">
+    <path fill="url(#g)" d="M16 2 4 6.4v9.1c0 6.7 4.6 12.8 12 14.5 7.4-1.7 12-7.8 12-14.5V6.4z"/>
+    <path stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="m10.6 16.3 3.8 3.8 7-7.6"/>
+  </g>
+  <text x="300" y="360" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="42" font-weight="700" fill="#eef0fb">headers.sec</text>
+  <text x="300" y="398" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="19" fill="#9aa3d4">TLS certificate &amp; security header check</text>
+</svg>

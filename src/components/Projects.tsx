@@ -21,12 +21,12 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
   return (
     <div
       ref={ref}
-      className={`bg-background/50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 scroll-animate animate-fade-in-up ${
+      className={`h-full flex flex-col bg-background/50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 scroll-animate animate-fade-in-up ${
         isVisible ? "visible" : ""
       }`}
       style={{ transitionDelay: `${index * 0.1}s` }}
     >
-      <div className="h-64 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center overflow-hidden">
+      <div className="h-64 shrink-0 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center overflow-hidden">
         <Image
           src={project.image}
           alt={project.title}
@@ -36,16 +36,16 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         />
       </div>
 
-      <div className="p-6">
-        <h3 className="text-xl font-bold text-foreground mb-3">
+      <div className="p-6 flex flex-col flex-1">
+        <h3 className="text-xl font-bold text-foreground mb-3 min-h-[3.5rem]">
           {project.title}
         </h3>
 
-        <p className="text-foreground/80 mb-4 leading-relaxed">
+        <p className="text-foreground/80 mb-4 leading-relaxed line-clamp-4 min-h-[6.5rem]">
           {project.description}
         </p>
 
-        <div className="flex flex-wrap gap-2 mb-6">
+        <div className="flex flex-wrap content-start gap-2 mb-6 min-h-[4rem]">
           {project.technologies.map((tech: string) => (
             <span
               key={tech}
@@ -56,7 +56,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           ))}
         </div>
 
-        <div className="flex gap-4">
+        <div className="flex gap-4 mt-auto">
           <a
             href={project.live}
             target="_blank"
@@ -94,6 +94,14 @@ export default function Projects() {
       image: "./images/MLB_Standings.jpg",
       live: "https://connordevitt.github.io/Reactoria/",
     },
+    {
+      title: "Headers.sec",
+      description:
+        "A security scanner that checks a site's TLS certificate and grades the seven response headers that harden it.",
+      technologies: ["TypeScript", "Cloudflare Workers", "TLS", "Web Security"],
+      image: "./images/headers-sec.svg",
+      live: "https://headers-sec.headersecurity.workers.dev/",
+    },
   ];
 
   return (
@@ -115,7 +123,7 @@ export default function Projects() {
             Featured Projects
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <ProjectCard key={index} project={project} index={index} />
             ))}
