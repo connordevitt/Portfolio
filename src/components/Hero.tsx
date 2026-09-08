@@ -18,8 +18,8 @@ export default function Hero() {
           </h1>
 
           <p className="text-xl md:text-2xl text-foreground/80 mb-8 leading-relaxed">
-            Full-stack developer focused on building modern, impactful digital
-            experiences
+            Software Engineer and Security Professional. I build modern web
+            applications and secure them.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

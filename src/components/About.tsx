@@ -25,11 +25,13 @@ export default function About() {
     "Node.js",
     "Python",
     "AWS",
-    "Digital Ocean",
-    "Git",
-    "Tailwind CSS",
-    "Bootstrap",
     "SQL",
+    "Burp Suite",
+    "Splunk / SIEM",
+    "TLS & PKI",
+    "CSP & Security Headers",
+    "Threat Modeling",
+    "Incident Response",
   ];
 
   return (
@@ -51,28 +53,32 @@ export default function About() {
             About Me
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
             <div
               ref={contentRef}
               className={`scroll-animate animate-slide-in-left ${
                 contentVisible ? "visible" : ""
               }`}
             >
-              <p className="text-lg text-foreground/80 mb-6 leading-relaxed">
-                I&apos;m a passionate full-stack developer with a love for
-                creating innovative digital solutions. With experience in modern
-                web technologies, I enjoy building applications that make a
-                difference.
+              <p className="text-foreground/80 mb-4 leading-relaxed">
+                I&apos;m a Software Engineer and Technical Support Engineer II.
+                I ship production web applications and secure them to
+                enterprise standards, treating both as the same job.
               </p>
-              <p className="text-lg text-foreground/80 mb-6 leading-relaxed">
-                When I&apos;m not coding, you can find me exploring new
-                technologies, playing video games, or watching sports!
+              <p className="text-foreground/80 mb-4 leading-relaxed">
+                I take on both sides as client work: building applications
+                from the ground up, and assessing live ones the way an attacker
+                would approach them.
+              </p>
+              <p className="text-foreground/80 mb-6 leading-relaxed">
+                Away from the keyboard, I&apos;m usually chasing down new tech,
+                playing video games, or watching sports.
               </p>
               <div className="flex flex-wrap gap-2">
                 {skills.map((skill) => (
                   <span
                     key={skill}
-                    className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium"
+                    className="px-3 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium"
                   >
                     {skill}
                   </span>
@@ -86,8 +92,8 @@ export default function About() {
                 imageVisible ? "visible" : ""
               }`}
             >
-              <div className="w-full h-96 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center overflow-hidden">
-                <div className="w-80 h-80 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center overflow-hidden shadow-2xl">
+              <div className="w-full aspect-square max-h-[26rem] bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center overflow-hidden">
+                <div className="w-4/5 aspect-square bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center overflow-hidden shadow-2xl">
                   <Image
                     src="./images/ME.jpg"
                     alt="Connor Devitt"
