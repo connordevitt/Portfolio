@@ -17,7 +17,7 @@ export default function PostShell({ post, blocks }: PostShellProps) {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true);
+    const reveal = window.requestAnimationFrame(() => setIsVisible(true));
 
     let frame = 0;
     const update = () => {
@@ -41,6 +41,7 @@ export default function PostShell({ post, blocks }: PostShellProps) {
     return () => {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
+      window.cancelAnimationFrame(reveal);
       if (frame) window.cancelAnimationFrame(frame);
     };
   }, []);
